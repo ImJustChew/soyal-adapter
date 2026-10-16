@@ -1,0 +1,32 @@
+{
+  "name": "soyal-adapter",
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "bun@1.3.5",
+  "scripts": {
+    "build": "tsc --noEmit -p tsconfig.json",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "bun test",
+    "cli": "bun run src/cli.ts",
+    "simulate": "bun run src/simulator-entry.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./frame": "./src/frame.ts",
+    "./command": "./src/command.ts",
+    "./record": "./src/record.ts",
+    "./event": "./src/event.ts",
+    "./bypass": "./src/bypass.ts",
+    "./adapter": "./src/adapter.ts",
+    "./direct-transport": "./src/direct-transport.ts",
+    "./timezone": "./src/timezone.ts",
+    "./wire": "./src/wire.ts",
+    "./simulator": "./src/simulator.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.15",
+    "@types/node": "^25.0.0",
+    "typescript": "^5.8.3"
+  }
+}
